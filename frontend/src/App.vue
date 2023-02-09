@@ -24,7 +24,8 @@ export default {
     initTerm() {
       const term = new Terminal({
         fontSize: 14,
-        cursorBlink: true
+        cursorBlink: true,
+        fontFamily: 'MesloLGS NF'
       });
       const attachAddon = new AttachAddon(this.socket);
       const fitAddon = new FitAddon();

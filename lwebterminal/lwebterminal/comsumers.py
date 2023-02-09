@@ -34,7 +34,7 @@ class PracticeConsumer(SyncConsumer):
                             stdout=slave_fd,
                             stderr=slave_fd,
                             preexec_fn=os.setsid,
-                            env=dict(os.environ, TERM='xterm'))
+                            env=dict(os.environ, TERM='xterm-256color'))
         os.write(master_fd, 'stty rows 45 columns 160\n'.encode())
 
         while p.poll() is None:
